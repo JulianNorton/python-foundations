@@ -11,7 +11,9 @@ def read_text():
     # print(text)
     
     # need to replace spaces or it returns "HTTP Error 400: Bad Request"
-    # regular expression needed to remove spaces
+    # regular expression? needed to remove all white space.
+    # http://stackoverflow.com/questions/11475885/python-replace-regex/11475905#11475905
+    # http://stackoverflow.com/questions/8270092/python-remove-all-whitespace-in-a-string
     text_to_check = text_to_check.replace(' ','%20')
     text_to_check = text_to_check.replace('\n','%20')
 
