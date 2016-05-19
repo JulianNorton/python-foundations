@@ -11,20 +11,23 @@ def read_text():
     # print(text)
     
     # need to replace spaces or it returns "HTTP Error 400: Bad Request"
-    text_to_check = text_to_check.replace(' ','+')
+    # regular expression needed to remove spaces
+    text_to_check = text_to_check.replace(' ','%20')
+    text_to_check = text_to_check.replace('\n','%20')
 
-    text_to_check = 'shit  '
+    # text_to_check = 'shit  '
     check_profanity(text_to_check)
 
 
 def check_profanity(text_to_check):
     
     url_to_check = 'http://www.wdylike.appspot.com/?q=' + text_to_check
-    # print(url_to_check)
     connection = urllib.request.urlopen(url_to_check)
     # print(connection)
     output = connection.read()
     print(output)
+    print(url_to_check)
+    print(url_to_check)
     connection.close()
 
 read_text()
