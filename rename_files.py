@@ -5,8 +5,8 @@ import os
 def rename_files():
     # 1. get file names from a folder
     file_list = os.listdir("/Users/j/github/python-foundations/")
-    print(os.listdir("/Users/j/github/python-foundations/"))
-    print("/Users/j/github/python-foundations/")
+    #print(os.listdir("/Users/j/github/python-foundations/"))
+    #print("/Users/j/github/python-foundations/")
     saved_path = os.getcwd()
     os.chdir("/Users/j/github/python-foundations/")
     # 2. For each file, rename filename.
