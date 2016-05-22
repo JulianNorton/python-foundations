@@ -16,10 +16,17 @@ def check_profanity(text_to_check):
     
     url_to_check = 'http://www.wdylike.appspot.com/?q=' + text_to_check
     connection = urllib.request.urlopen(url_to_check)
-    output = connection.read()
+    output = str(connection.read())
     print(url_to_check)
-    print('\n', output, '\n')
+    print(output)
     connection.close()
+    if "true" in output:
+        print('PROFANITY!')
+    elif "false" in output:
+        print('No profane words detected')
+    else:
+        print('Failed to detect a true or false.')
+    print('\n')
 
 read_text()
 
