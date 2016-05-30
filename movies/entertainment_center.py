@@ -1,5 +1,5 @@
-import media
 import fresh_tomatoes
+import media
 
 toy_story = media.Movie(
                         'toy story',
@@ -23,4 +23,6 @@ there_will_be_blood = media.Movie(
                     )
 
 movies = [toy_story, avatar, there_will_be_blood]
-fresh_tomatoes.open_movies_page(movies)
+# fresh_tomatoes.open_movies_page(movies)
+# print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
