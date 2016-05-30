@@ -1,9 +1,21 @@
-class Parent(object):
-    def __init__(self, last_name, fur_length):
+class Parent():
+    def __init__(self, first_name, fur_length):
         print('parent constructor called')
-        self.last_name = last_name
+        self.first_name = first_name
         self.fur_length = fur_length
 
-papa_bear = Parent("papa", "long")
+    def show_info(self):
+        print('First name - ' + self.first_name)
+        print('Fur length - ' + self.fur_length)
 
-print(papa_bear.last_name)
+
+class Child(Parent):
+    def __init__(self, first_name, fur_length, favorite_snack):
+        print('child constructor called')
+        Parent.__init__(self, first_name, fur_length)
+        self.favorite_snack = favorite_snack
+
+papa_bear = Parent("papa", "long")
+boop_bear = Child("boop", "short", "humans")
+
+papa_bear.show_info()
